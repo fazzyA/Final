@@ -5,7 +5,7 @@ const welfareSchema = mongoose.Schema({
             required:[true, "MRNo is missing"] 
         },
         TokenNo: {
-            type: String, 
+            type: Number, 
             required:[true, "TokenNo is missing"] 
         },
         WelfareDate: {
@@ -91,6 +91,9 @@ const welfareSchema = mongoose.Schema({
         ReqRelationWithPatient: {
             type: String, 
             required:[true, "ReqRelationWithPatient is missing"] 
+        },
+        FamilyDetail: {
+            type: Array
         },
 })
 const Welfare = mongoose.model('Welfare', welfareSchema)

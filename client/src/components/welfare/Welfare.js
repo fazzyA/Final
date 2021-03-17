@@ -169,7 +169,7 @@ const handleSubmit = () => {
           </Grid>
           <Grid item md={4} sm={12} lg={3}>
             <TextField value={Header.TokenNo} id="TokenNo" type="text" fullWidth
-              onChange={(e) => setHeader({ ...Header, TokenNo: e.target.value })}
+              onChange={(e) => setHeader({ ...Header, TokenNo: Number(e.target.value) })}
               label="TokenNo"/>
           </Grid>
           <Grid item md={4} sm={12} lg={3}>
@@ -352,8 +352,7 @@ const handleSubmit = () => {
           </Grid>
         </Grid>
       </div>
-
-      <SubTable/>
+<SubTable/>
     </div>
     
   );

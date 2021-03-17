@@ -17,48 +17,39 @@ const registerSchema = mongoose.Schema({
         },
         FatherOrHusband: {
             type: String, 
-            required:[true, "FatherOrHusband is missing"] 
         },
         DOB: {
             type: Date,
-            required:[true, "DOB is missing"] 
         },
         Age: {
             type: Number, 
-            required:[true, "Age is missing"] 
         },
         Gender: "",
         Religion: {
             type: String, 
-            required:[true, "Religion is missing"] 
         },
         District:{
             type: String, 
-            required:[true, "District is missing"] 
         },
         City: {
             type: String, 
-            required:[true, "City is missing"] 
         },
         Area: {
             type: String, 
-            required:[true, "Area is missing"] 
         },
         HousNo: {
             type: String, 
-            required:[true, "HouseNo is missing"] 
-        },
+       },
         Address: {
             type: String, 
-            required:[true, "Adddress is missing"] 
         },
         CNIC: {
             type: Number, 
-            required:[true, "CNIC is missing"] 
+            // required:[true, "CNIC is missing"] 
         },
         Phone: {
             type: Number, 
-            required:[true, "Phone is missing"] 
+            // required:[true, "Phone is missing"] 
         },
         OffPhone: {
             type: Number
@@ -68,33 +59,33 @@ const registerSchema = mongoose.Schema({
         },
         RefBy: {
             type: String, 
-            required:[true, "Ref is missing"] 
+            // required:[true, "Ref is missing"] 
         },
         Remarks: {
             type: String, 
-            required:[true, "Remarks is missing"] 
+            // required:[true, "Remarks is missing"] 
         },
         IsRejected: {
             type: Boolean
         },
         IsZakat: {
             type: Boolean, 
-            required:[true, "IsRejected is missing"] 
+            // required:[true, "IsRejected is missing"] 
         },
         IsPAFEmp: {
             type: Boolean
         },
         MonthlyConsLimit: {
             type: Number, 
-            required:[true, "MonthlyConsLimit is missing"] 
+            // required:[true, "MonthlyConsLimit is missing"] 
         },
         NOY: {
             type: Number, 
-            required:[true, "NOY is missing"] 
+            // required:[true, "NOY is missing"] 
         },
         EmpID: {
             type: Number, 
-            required:[true, "EmpID is missing"] 
+            // required:[true, "EmpID is missing"] 
         },
         IsStaff:{
             type: Boolean
