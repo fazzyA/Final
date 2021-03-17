@@ -25,13 +25,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Register({next, back}) {
+export default function Register({next, back, recID, setrecID}) {
   const classes = useStyles();
   const [options,setOptions] = useState([])
   const [err, setErr] = useState('')
   const [ open, setOpen] = useState(false)
   const [Header, setHeader] = useState({
-    MRNo: "",
+    MRNo: recID,
     TokenNo: "",
     RegistrationDate: new Date(),
     Name: "",
@@ -173,7 +173,9 @@ export default function Register({next, back}) {
     if ( val === true ) {
       console.log("IN")
       axios.post('http://localhost:4000/api/register/add', Header)
-      .then(res => next())
+      .then(res => {
+        setrecID(Header.MRNo)
+        next()})
       .catch(err => console.log(err, 'err'))
     }
   }

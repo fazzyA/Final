@@ -25,13 +25,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Welfare({next, back}) {
+export default function Welfare({next, back, recID, setrecID}) {
   const classes = useStyles();
   const [ open, setOpen] = useState(false)
   const [ err, setErr] = useState('')
 
   const [Header, setHeader] = useState({
-    MRNo: 'recID',
+    MRNo: recID,
     TokenNo: "",
     WelfareDate: new Date(),
     Profession: "",

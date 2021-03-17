@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Service({next, back}) {
+export default function Service({next, back, recID, setrecID}) {
   const classes = useStyles();
   const [err, setErr] = useState('')
   const [ open, setOpen] = useState(false)
@@ -32,7 +32,7 @@ export default function Service({next, back}) {
   const [Header, setHeader] = useState({
     TokenNo: "",
     ServiceDate: new Date(),
-    MRNo: 'recID',
+    MRNo: recID,
     Ward: "",
     Amount: "",
     TotalAmount: "",

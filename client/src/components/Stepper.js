@@ -26,14 +26,14 @@ function getSteps() {
   return ['Registeration', 'Welfare', 'Services'];
 }
 
-function getStepContent(step, handleNext, handleBack) {
+function getStepContent(step, handleNext, handleBack, recID, setrecID) {
   switch (step) {
     case 0:
-      return <Register next={handleNext} back={handleBack}/>;
+      return <Register recID={recID} setrecID={setrecID} next={handleNext} back={handleBack}/>;
     case 1:
-      return <Welfare next={handleNext} back={handleBack}/>;
+      return <Welfare recID={recID} setrecID={setrecID} next={handleNext} back={handleBack}/>;
     case 2:
-      return <Services next={handleNext} back={handleBack}/>;
+      return <Services recID={recID} setrecID={setrecID} next={handleNext} back={handleBack}/>;
     default:
       return 'Unknown step';
   }
@@ -66,6 +66,7 @@ export default function HorizontalLinearStepper({handleClose}) {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     setSkipped(newSkipped);
   };
+  const [recID, setrecID] = React.useState('');
 
   const handleBack = () => {
     if(activeStep == 0) {
@@ -125,7 +126,7 @@ export default function HorizontalLinearStepper({handleClose}) {
           </div>
         ) : (
           <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep, handleNext, handleBack)}</Typography>
+            <Typography className={classes.instructions}>{getStepContent(activeStep, handleNext, handleBack, recID, setrecID)}</Typography>
             <div>
               <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
                 Back
