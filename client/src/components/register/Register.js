@@ -186,12 +186,13 @@ export default function Register({next, back}) {
       <Grid container spacing={2}>
         <Grid item md={4} sm={12} lg={3}>
           <TextField value={Header.MRNo} id="MRNo" fullWidth
-            type="text" disabled={true}
+            type="text" disabled={false}
+            onChange={(e) => setHeader({ ...Header, MRNo: e.target.value })}
             label="M.R. #"/>
         </Grid>
         <Grid item md={4} sm={12} lg={3}>
           <TextField value={Header.TokenNo} id="TokenNo" type="text" fullWidth
-            onChange={(e) => setHeader({ ...Header, TokenNo: e.target.value })}
+            onChange={(e) => setHeader({ ...Header, TokenNo: Number(e.target.value) })}
             label="TokenNo"/>
         </Grid>
         <Grid item md={4} sm={12} lg={3}>

@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 const registerSchema = mongoose.Schema({
-    MRNo: "",
+    MRNo:{
+        type: String
+    },
         TokenNo: {
-            type: String, 
+            type: Number, 
             required:[true, "TokenNo is missing"] 
         },
         RegistrationDate: {
@@ -59,12 +61,10 @@ const registerSchema = mongoose.Schema({
             required:[true, "Phone is missing"] 
         },
         OffPhone: {
-            type: Number, 
-            required:[true, "OffPhone is missing"] 
+            type: Number
         },
         Mobile: {
-            type: Number, 
-            required:[true, "Mobile is missing"] 
+            type: Number
         },
         RefBy: {
             type: String, 
@@ -75,16 +75,14 @@ const registerSchema = mongoose.Schema({
             required:[true, "Remarks is missing"] 
         },
         IsRejected: {
-            type: Boolean, 
-            required:[true, "IsRejected is missing"] 
+            type: Boolean
         },
         IsZakat: {
             type: Boolean, 
             required:[true, "IsRejected is missing"] 
         },
         IsPAFEmp: {
-            type: Boolean, 
-            required:[true, "IsPAFEmp is missing"] 
+            type: Boolean
         },
         MonthlyConsLimit: {
             type: Number, 
@@ -99,8 +97,7 @@ const registerSchema = mongoose.Schema({
             required:[true, "EmpID is missing"] 
         },
         IsStaff:{
-            type: Boolean, 
-            required:[true, "IsStaff is missing"] 
+            type: Boolean
         },
     
 })
