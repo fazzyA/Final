@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const serviceSchema = mongoose.Schema({
         TokenNo: {
-            type: String, 
+            type: Number, 
             required:[true, "TokenNo is missing"] 
         },
         ServiceDate: {
@@ -32,10 +32,6 @@ const serviceSchema = mongoose.Schema({
             type: String, 
             required:[true, "Remarks is missing"] 
         },
-        Remarks: {
-            type: String, 
-            required:[true, "Remarks is missing"] 
-        }
 })
 const Service = mongoose.model('Service', serviceSchema)
 module.exports = Service

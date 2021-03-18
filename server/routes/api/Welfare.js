@@ -1,5 +1,5 @@
 const express = require('express')
-const Welfare = require('../../models/Welfare')
+const Welfare = require('../../models/Welfare.js')
 const router = express.Router()
 
 router.post('/add', async (req, res) => {

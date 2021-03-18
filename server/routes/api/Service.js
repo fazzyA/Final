@@ -1,5 +1,5 @@
 const express = require('express')
-const Service = require('../../models/Service')
+const Service = require('../../models/Service.js')
 const router = express.Router()
 
 router.post('/add', async (req, res) => {

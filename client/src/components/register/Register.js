@@ -37,7 +37,7 @@ export default function Register({next, back, recID, setrecID}) {
     Name: "",
     FatherOrHusband: "",
     DOB: new Date(),
-    Age: "",
+    Age: 0,
     Gender: "",
     Religion: "",
     District: "",
@@ -168,7 +168,8 @@ export default function Register({next, back, recID, setrecID}) {
 
 
    const handleSubmit = () => {
-    const val=validate();
+    // const val=validate();
+    const val=true;
     console.log(Header);
     if ( val === true ) {
       console.log("IN")
@@ -225,7 +226,7 @@ export default function Register({next, back, recID, setrecID}) {
         </Grid>
         <Grid item md={4} sm={12} lg={3}>
           <TextField value={Header.Age} id="Age" type="number" fullWidth
-            onChange={(e) => setHeader({ ...Header, Age: e.target.value })}
+            onChange={(e) => setHeader({ ...Header, Age: Number(e.target.value) })}
             label="Age"/>
         </Grid>
         <Grid item md={4} sm={12} lg={3}>

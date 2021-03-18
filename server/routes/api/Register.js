@@ -1,5 +1,5 @@
 const express = require('express')
-const Register = require('../../models/Register')
+const Register = require('../../models/Register.js')
 const router = express.Router()
 
 // router.get('/', async (req, res) => {

@@ -1,9 +1,9 @@
+import React from 'react'
 import MaterialTable from 'material-table'
 import FormDialog from '../Dialog';
 import AddIcon from '@material-ui/icons/Add';
-import React from 'react'
-
-const SubTable = () => {
+import {tableIcons} from '../tableIcons'
+const Detail = () => {
     const { useState } = React;
 
     const [columns, setColumns] = useState([
@@ -58,5 +58,5 @@ const SubTable = () => {
     )
 }
 
-export default SubTable
+export default Detail
 
